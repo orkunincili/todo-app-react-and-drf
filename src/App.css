@@ -1,38 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,700;1,300&display=swap");
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body{
+  background-image: linear-gradient(120deg, #262626 0%, #4d4d4d 100%);
+  color: white;
   min-height: 100vh;
+  font-family: 'Ubuntu',sans-serif;
+}
+
+header{
+  margin-top:5rem;
+}
+
+form{
+  margin-top: 2rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 20vh;
+}
+form input,form select{
+  padding: 0.4rem;
+  font-size: 1rem;
+
 }
 
-.App-link {
-  color: #61dafb;
+
+.todo-container{
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.todo{
+  width: 100%;
+  border-bottom:1px solid #595959;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  padding:1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.completed{
+  text-decoration: line-through;
+  opacity:0.5;
+}
+.check-green{
+  color: green;
+}
+.check-white{
+  color:white;
+}
+ul{
+  list-style-type: none;
+}
+
+.todo{
+  display:flex;
+  margin:0.5rem;
 }
