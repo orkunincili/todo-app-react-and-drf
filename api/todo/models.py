@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.conf import settings
 # Create your models here.
 
 
@@ -9,6 +9,10 @@ class Todo(models.Model):
         ("1", "Low"),
         ("2", "Normal"),
         ("3", "High")
+    )
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE
     )
     title = models.CharField(max_length=255)
     priority = models.CharField(max_length=6, choices=PRIORITY_CHOICES, default="1")
